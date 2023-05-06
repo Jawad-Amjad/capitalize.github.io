@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button {
+            height: 30px;
+            width: 100px;
+            vertical-align: top;
+            background-color: rgb(163, 31, 31);
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .Clear {
+            background-color: rgb(156, 156, 248);
+        }
+        .bg{
+            background-color: black;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="bg">
+            <div>
+                <textarea cols="30" rows="10" id="area-1"></textarea>
+                <textarea id="area-2" cols="30" rows="10"></textarea>
+            </div>
+            <button onclick="lower()">Lower Case</button>
+            <button onclick="upper()">Upper Case</button>
+            <button class="Clear" onclick="cleaar()">Clear</button>
+        </div>
+    </center>
+    <script>
+        function lower() {
+            let a = document.getElementById("area-1").value;
+            document.getElementById("area-2").innerText = a.toLowerCase();
+        }
+        function upper() {
+            let a = document.getElementById("area-1").value;
+            document.getElementById("area-2").innerText = a.toUpperCase();
+        }
+        function cleaar() {
+            document.getElementById("area-1").value = "";
+            document.getElementById("area-2").value = "";
+        }
+    </script>
+</body>
+
+</html>
